@@ -1,8 +1,19 @@
-<form method="POST" action="/new">
-  <h2>Send a new message!</h2>
-  <label for="message">Message: </label>
-  <input type="text" id="message">
-  <label for="username">Username</label>
-  <input type="text" id="username">
-  <button type="submit">Post</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Message</title>
+</head>
+<body>
+  <h1>Write your message</h1>
+  <form method="POST" action="/new">
+    <h2>Send a new message!</h2>
+    <label for="text">Message: </label>
+    <input type="text" id="text" name="text">
+    <label for="user">Username</label>
+    <input type="text" id="user" name="user">
+    <button type="submit">Post</button>
+  </form>
+</body>
+</html>

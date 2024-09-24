@@ -1,7 +1,10 @@
 <ul>
-  <% messages.forEach(function(message) { %>
+  <% messages.forEach(function(message, index) { %>
     <li>
       <strong><%= message.user %></strong>: <%= message.text %> (Posted on <%= message.added.toDateString() %>)
+      <form action="/message/<%= index %>" method="GET">
+        <button type="submit">Open</button>
+      </form>
     </li>
   <% }) %>
 </ul>

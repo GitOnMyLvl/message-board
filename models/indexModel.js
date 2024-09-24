@@ -31,4 +31,13 @@ const messages = [
   }
 ];
 
-module.exports = messages;
+function addMessage(text, user) {
+  const message = {
+    text: text,
+    user: user,
+    added: new Date()
+  };
+  messages.push(message);
+}
+
+module.exports = { messages, addMessage };
