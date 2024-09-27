@@ -1,12 +1,11 @@
-const { addMessage } = require('../models/indexModel')
+const db = require('../db/queries')
 
 exports.form = (req, res) => {
   res.render('form');
 }
 
-exports.postMessage = (req, res) => {
-  console.log(req.body);
+exports.postMessage = async (req, res) => {
   const { text, user } = req.body;
-  addMessage(text, user);
+  await db.addMessage(text, user);
   res.redirect('/');
 }

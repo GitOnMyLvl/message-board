@@ -1,8 +1,8 @@
 <ul>
-  <% messages.forEach(function(message, index) { %>
+  <% messages.forEach(function(message) { %>
     <li>
-      <strong><%= message.user %></strong>: <%= message.text %> (Posted on <%= message.added.toDateString() %>)
-      <form action="/message/<%= index %>" method="GET">
+      <strong><%= message.username %></strong>: <%= message.text %> (Posted on <%= message.date.toLocaleDateString() %>)
+      <form action="/message/<%= message.id %>" method="GET">
         <button type="submit">Open</button>
       </form>
     </li>
